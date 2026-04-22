@@ -28,7 +28,7 @@ for epoch in range(epochs):
             b = b + lr * y[i]
             errors += 1
 
-    # Print every 10 epochs (to avoid too much output)
+    # Print every 10 epochs
     if epoch % 10 == 0:
         print(f"Epoch {epoch}/{epochs}:")
         print(f"Weights: {w}")
