@@ -1,13 +1,7 @@
 import numpy as np
 
 # 1. Input data (bipolar AND)
-X = np.array([
-    [1, 1],
-    [1, -1],
-    [-1, 1],
-    [-1, -1]
-])
-
+X = np.array([[1, 1],[1, -1],[-1, 1],[-1, -1]])
 y = np.array([1, -1, -1, -1])
 
 # 2. Initialize
@@ -19,10 +13,8 @@ epochs = 50
 # 3. Training
 for epoch in range(epochs):
     errors = 0
-    
     for i in range(len(X)):
-        y_pred = np.sign(np.dot(X[i], w) + b)
-        
+        y_pred = np.sign(np.dot(X[i], w) + b) 
         if y_pred != y[i]:
             w = w + lr * X[i] * y[i]
             b = b + lr * y[i]
