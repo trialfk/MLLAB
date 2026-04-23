@@ -1,0 +1,35 @@
+cd Downloads
+
+wget https://repo.anaconda.com/archive/Anaconda3-2025.06-0-Linux-x86_64.sh
+
+bash Anaconda3-2025.06-0-Linux-x86_64.sh
+
+conda --version
+
+anaconda-navigator
+
+
+now launch a new terminal , dont close the earlier terminal 
+conda create --name my_ml_env python=3.11
+conda activate my_ml_env
+conda install jupyter scikit-learn pandas matplotlib seaborn 
+jupyter notebook
+
+now perform the code 
+
+from sklearn.linear_model import LinearRegression
+
+# 1. DATA 
+X_train, y_train = [[1], [2], [3]], [10, 20, 30] # Training data
+X_test, y_test   = [[4], [5]],     [40, 50]     # Testing data 
+
+# 2. TRAIN
+model = LinearRegression().fit(X_train, y_train)
+
+# 3. PREDICT (Testing)
+predictions = model.predict(X_test)
+
+# 4. EVALUATION 
+print(f"Model Predictions: {predictions}")
+print(f"Actual Values: {y_test}")
+print(f"Accuracy Score: {model.score(X_test, y_test) * 100}%")
