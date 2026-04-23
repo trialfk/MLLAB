@@ -8,8 +8,10 @@ conda --version
 
 anaconda-navigator
 
+Now Lauch Jupyter notebook from the anaconda app 
+                    OR 
+launch a new terminal , dont close the earlier terminal 
 
-now launch a new terminal , dont close the earlier terminal 
 conda create --name my_ml_env python=3.11
 conda activate my_ml_env
 conda install jupyter scikit-learn pandas matplotlib seaborn 
