@@ -22,7 +22,7 @@ print(f"R2 Score: {r2_score(y, y_pred):.2f}")
 
 # 5. Visualization 
 plt.scatter(X, y, alpha=0.5)
-plt.plot(X, y_pred, linewidth=2)
+plt.plot(X, y_pred)
 plt.title("Linear Regression")
 plt.xlabel("Input Feature")
 plt.ylabel("Target Value")
