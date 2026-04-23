@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.svm import SVC
 from sklearn.datasets import make_blobs
-# Added confusion_matrix here
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 # 1. Generate dataset
@@ -15,9 +14,9 @@ model.fit(X, y)
 # 3. Predict
 y_pred = model.predict(X)
 
-# 4. Metrics (including confusion matrix)
+# 4. Metrics
 print("Accuracy:", accuracy_score(y, y_pred))
-print("\nConfusion Matrix:\n", confusion_matrix(y, y_pred)) # Added this line
+print("\nConfusion Matrix:\n", confusion_matrix(y, y_pred))
 print("\nReport:\n", classification_report(y, y_pred))
 
 # 5. Improved Plot
@@ -27,7 +26,7 @@ xx, yy = np.meshgrid(
     np.linspace(X[:,1].min()-1, X[:,1].max()+1, 50)
 )
 Z = model.decision_function(np.c_[xx.ravel(), yy.ravel()]).reshape(xx.shape)
-plt.contour(xx, yy, Z, levels=[0])           # decision boundary
-plt.contour(xx, yy, Z, levels=[-1, 1], linestyles='dashed') # margins
+plt.contour(xx, yy, Z, levels=[0])           
+plt.contour(xx, yy, Z, levels=[-1, 1], linestyles='dashed') 
 plt.title("Support Vector Machine ")
 plt.show()
