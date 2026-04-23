@@ -21,7 +21,7 @@ print("\nCluster Weights:\n", model.weights_)
 print("\n Log Likelihood :\n", model.score(X))
 
 # 5. Visualization
-plt.scatter(X[:,0], X[:,1], c=y_pred, cmap='viridis', alpha=0.6)
+plt.scatter(X[:,0], X[:,1], c=y_pred, alpha=0.5)
 plt.scatter(*model.means_.T, marker='X', s=200, c='black', label='Centers')
 plt.title("Expectation Maximization (GMM)")
 plt.legend()
