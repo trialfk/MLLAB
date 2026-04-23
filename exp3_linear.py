@@ -5,8 +5,6 @@ from sklearn.datasets import make_regression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # 1. Randomly generate a regression dataset
-# n_samples: number of rows, n_features: number of inputs
-# noise: adds randomness to the data points
 X, y = make_regression(n_samples=100, n_features=1, noise=15, random_state=42)
 
 # 2. Initialize and train the model
@@ -23,9 +21,9 @@ print(f"RMSE: {np.sqrt(mean_squared_error(y, y_pred)):.2f}")
 print(f"R2 Score: {r2_score(y, y_pred):.2f}")
 
 # 5. Visualization 
-plt.scatter(X, y, color='green', alpha=0.5)
-plt.plot(X, y_pred, color='black', linewidth=2)
-plt.title("Linear Regression (Actual vs Predicted)")
+plt.scatter(X, y, alpha=0.5)
+plt.plot(X, y_pred, linewidth=2)
+plt.title("Linear Regression")
 plt.xlabel("Input Feature")
 plt.ylabel("Target Value")
 plt.show()
