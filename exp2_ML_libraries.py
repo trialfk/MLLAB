@@ -5,7 +5,6 @@ print("--- NumPy ---")
 print("Array:", a)
 print("Mean:", np.mean(a))
 
-
 # Pandas → data manipulation (DataFrames)
 import pandas as pd
 data = {'Name': ['A', 'B', 'C'], 'Marks': [85, 90, 88]}
@@ -48,8 +47,7 @@ print("\n--- Scikit-learn ---")
 print("Prediction for 6:", model.predict([[6]]))
 
 
-
-import os  #dont write this on exam paper 
+import os  #Removes the warning messages , dont write on paper
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0' 
 
