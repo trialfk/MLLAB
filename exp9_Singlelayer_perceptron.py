@@ -25,5 +25,5 @@ for epoch in range(epochs):
         print(f"Epoch {epoch}/{epochs}:")
         print(f"Weights: {w}")
         print(f"Bias: {b}")
-        print(f"Errors in this epoch: {errors}")
+        print(f"Errors: {errors}")
         print("-" * 40)
