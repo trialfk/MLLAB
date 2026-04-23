@@ -22,8 +22,8 @@ print("-" * 30)
 print(f"Final Weights: w1={w1}, w2={w2}, b={b}")
 
 # 5. Visualization
-plt.scatter(x[:,0], x[:,1], c=y, s=100, cmap='bwr', edgecolors='k')
+plt.scatter(x[:,0], x[:,1], c=y, s=100, cmap='bwr')
 lims = np.array([-2, 2])
-plt.plot(lims, -(w1 * lims + b) / w2, 'k-')
+plt.plot(lims, -(w1 * lims + b) / w2)
 plt.title("Hebbian Boundary")
 plt.show()
