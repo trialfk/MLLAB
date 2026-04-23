@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 1. Define input data (4 patterns of bipolar inputs)
 # Inputs (x1, x2) and Target (y)
 x = np.array([[1, 1], [1, -1], [-1, 1], [-1, -1]])
 y = np.array([1, -1, -1, -1])
@@ -11,7 +10,7 @@ w1, w2, b = 0, 0, 0
 print("Initial Weights: w1=0, w2=0, b=0")
 print("-" * 30)
 
-# 3. Hebbian Learning Rule: w(new) = w(old) + x*y
+# 3. Hebbian Learning
 for i in range(len(x)):
     w1 = w1 + x[i][0] * y[i]
     w2 = w2 + x[i][1] * y[i]
@@ -24,7 +23,6 @@ print(f"Final Weights: w1={w1}, w2={w2}, b={b}")
 
 # 5. Visualization
 plt.scatter(x[:,0], x[:,1], c=y, s=100, cmap='bwr', edgecolors='k')
-# Decision Boundary: x2 = -(w1*x1 + b) / w2
 lims = np.array([-2, 2])
 plt.plot(lims, -(w1 * lims + b) / w2, 'k-')
 plt.title("Hebbian Boundary")
