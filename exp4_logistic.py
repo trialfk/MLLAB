@@ -21,10 +21,10 @@ print("\nConfusion Matrix:\n", confusion_matrix(y, y_pred))
 print("\nClassification Report:\n", classification_report(y, y_pred))
 
 # 5. Visualization
-plt.title("Logistic Regression")
-plt.scatter(X, y, alpha=0.5)
 x = np.linspace(X.min(), X.max(), 200).reshape(-1, 1)
+plt.scatter(X, y, alpha=0.5)
 plt.plot(x, model.predict_proba(x)[:, 1])
+plt.title("Logistic Regression")
 plt.xlabel("Feature Value")
 plt.ylabel("Class (0 or 1)")
 plt.show()
