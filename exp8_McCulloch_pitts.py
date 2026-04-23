@@ -1,12 +1,7 @@
 import numpy as np
 
 # 1. Input patterns
-X = np.array([
-    [0, 0],
-    [0, 1],
-    [1, 0],
-    [1, 1]
-])
+X = np.array([[0,0],[0,1],[1,0],[1,1]])
 
 # 2. Weights and threshold
 w = np.array([1, 1])
