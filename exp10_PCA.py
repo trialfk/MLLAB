@@ -17,8 +17,7 @@ print("Reduced shape:", X_reduced.shape)
 print("Explained Variance Ratio:", pca.explained_variance_ratio_)
 
 # 4. Simple Visualization
-plt.scatter(X_reduced[:, 0], X_reduced[:, 1],
-             c=y)
+plt.scatter(X_reduced[:, 0], X_reduced[:, 1], c=y)
 plt.title("PCA: 4D reduced to 2D")
 plt.xlabel("Principal Component 1")
 plt.ylabel("Principal Component 2")
