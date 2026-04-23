@@ -19,8 +19,8 @@ print("Accuracy:", accuracy_score(y, y_pred))
 print("\nConfusion Matrix:\n", confusion_matrix(y, y_pred))
 print("\nReport:\n", classification_report(y, y_pred))
 
-# 5. Improved Plot
-plt.scatter(X[:,0], X[:,1], c=y, cmap='bwr', alpha=0.6)
+# 5. Visualization
+plt.scatter(X[:,0], X[:,1], c=y, cmap='bwr', alpha=0.5)
 xx, yy = np.meshgrid(
     np.linspace(X[:,0].min()-1, X[:,0].max()+1, 50),
     np.linspace(X[:,1].min()-1, X[:,1].max()+1, 50)
